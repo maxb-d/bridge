@@ -48,13 +48,9 @@ export class AgregateService {
                     amount: account.amount,
                     transactions: [ ...transactions ]
                 }
-
-            console.log(`transactions for account ${account.acc_number} are : `, trans)
-            console.log(`parsed eleme =  `, parsedElem)
             
             parsedOutput.push(parsedElem)
         })
-        console.log('parsed output == ', parsedOutput)
         return parsedOutput;
     }
 

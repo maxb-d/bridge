@@ -1,15 +1,17 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { BridgeModule } from './bridge/bridge.module';
 import { ConfigModule } from '@nestjs/config';
+import { UserModule } from './user/user.module';
+import { AgregateModule } from './agregate/agregate.module';
 
 @Module({
   imports: [
-    BridgeModule,
     ConfigModule.forRoot({
       isGlobal: true
-    })
+    }),
+    UserModule,
+    AgregateModule
   ],
   controllers: [AppController],
   providers: [AppService],
